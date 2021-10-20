@@ -1,5 +1,9 @@
 import React from "react";
 import { Title, Link, Meta } from "react-head";
+import Montserrat300Woff2 from "../../../static/fonts/montserrat/montserrat-300.woff2";
+import Montserrat400Woff2 from "../../../static/fonts/montserrat/montserrat-400.woff2";
+import Montserrat600Woff2 from "../../../static/fonts/montserrat/montserrat-600.woff2";
+import OrelegaOne400Woff2 from "../../../static/fonts/orelega-one/orelega-one-400.woff2";
 
 const Head = () => (
   <>
@@ -14,28 +18,28 @@ const Head = () => (
     <meta name='author' content='Carlos Alvarez Design' />
     <Link
       rel='preload'
-      href='/fonts/montserrat/montserrat-300.woff2'
+      href={Montserrat300Woff2}
       as='font'
       type='font/woff2'
       crossOrigin='anonymous'
     />
     <Link
       rel='preload'
-      href='/fonts/montserrat/montserrat-400.woff2'
+      href={Montserrat400Woff2}
       as='font'
       type='font/woff2'
       crossOrigin='anonymous'
     />
     <Link
       rel='preload'
-      href='/fonts/montserrat/montserrat-600.woff2'
+      href={Montserrat600Woff2}
       as='font'
       type='font/woff2'
       crossOrigin='anonymous'
     />
     <Link
       rel='preload'
-      href='/fonts/orelega-one/orelega-one-400.woff2'
+      href={OrelegaOne400Woff2}
       as='font'
       type='font/woff2'
       crossOrigin='anonymous'

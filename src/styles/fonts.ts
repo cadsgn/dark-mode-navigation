@@ -8,7 +8,7 @@ export default createGlobalStyle`
     @font-face {
         font-family: 'Montserrat';
         src: 
-            local('Montserrat'), local('Montserrat'),
+            local('Montserrat'),
             url(${Montserrat300Woff2}) format('woff2');
         font-weight: 300;
         font-style: normal;
