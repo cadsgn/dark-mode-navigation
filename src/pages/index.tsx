@@ -15,7 +15,6 @@ const PageStyle = styled.main`
   width: 100%;
   align-items: center;
   color: #232129;
-  padding: 96px;
 `;
 
 const HeadContainerStyle = styled.section`
@@ -23,31 +22,27 @@ const HeadContainerStyle = styled.section`
 `;
 
 const HeadTitleStyle = styled.p`
-  font-size: 96px;
-  color: #663399;
+  font-size: 82px;
+  font-family: Orelega, Georgia, "Times New Roman", Times, serif;
+  margin: 0;
 `;
 
 const HeadSubTitleStyle = styled.p`
-  font-size: 12px;
-  color: #663399;
   text-align: center;
 `;
 
-const ParagraphStyle = styled.p`
-  margin-bottom: 48px;
-`;
+const ParagraphStyle = styled.p``;
 
 const CodeStyle = styled.code`
   color: #8a6534;
   padding: 4px;
   background-color: #fff4db;
-  font-size: 1.25rem;
   border-radius: 4px;
 `;
 
 const EffectStrokeShadow = styled.span`
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #111827;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #750437;
   text-shadow: 4px 4px #db2777;
   color: transparent;
 `;

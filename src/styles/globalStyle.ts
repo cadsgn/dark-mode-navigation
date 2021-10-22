@@ -4,7 +4,7 @@ const GlobalStyle = createGlobalStyle`
     html {
         font-family: 'Montserrat', serif;
         font-weight: 400;
-        font-size: 62.5%;
+        font-size: 16px;
         color: #000000;
         -webkit-tap-highlight-color: transparent; 
     }
