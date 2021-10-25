@@ -1021,7 +1021,7 @@
     core-js-pure "^3.16.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.15.4", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.3", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.15.4", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.3", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
   version "7.15.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.15.4.tgz#fd17d16bfdf878e6dd02d19753a39fa8a8d9c84a"
   integrity sha512-99catp6bHCaxr4sJ/DbTGgHS4+Rs2RVd2g7iOap6SLGPDknRK9ztKNsE/Fg6QhSeh1FGE5f6gHGQmvvn3I3xhw==
@@ -4838,13 +4838,6 @@ gatsby-plugin-preload-fonts@^2.14.0:
     graphql-request "^1.8.2"
     progress "^2.0.3"
     puppeteer "^3.3.0"
-
-gatsby-plugin-react-head@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-head/-/gatsby-plugin-react-head-1.1.0.tgz#bb30f03f5e6b31d5d364e6af3d96a5d57dd584b8"
-  integrity sha512-l8QxSC7xm5BDjaH7eXIPuH1VClofJniWJRDrpC3z+XsqLXq/jFSUN58wA+MsVZpt6/PtB8BllJnokF/UQX7mxg==
-  dependencies:
-    "@babel/runtime" "^7.0.0"
 
 gatsby-plugin-react-helmet@^4.14.0:
   version "4.14.0"

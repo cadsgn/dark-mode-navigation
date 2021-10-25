@@ -1,20 +1,19 @@
 import * as React from "react";
 import styled from "styled-components";
+//styles
 import GlobalFonts from "../styles/fonts";
 import GlobalStyle from "../styles/globalStyle";
+import { ThemeProvider } from "styled-components";
+import { theme, lightTheme, darkTheme } from "../styles/theme";
+//components
 import Layout from "../components/layout/layout";
 
 // styles
-interface IStyledProps {
-  color?: string;
-}
-
 const PageStyle = styled.main`
   display: flex;
   flex-flow: column;
   width: 100%;
   align-items: center;
-  color: #232129;
 `;
 
 const HeadContainerStyle = styled.section`
@@ -23,7 +22,7 @@ const HeadContainerStyle = styled.section`
 
 const HeadTitleStyle = styled.p`
   font-size: 82px;
-  font-family: Orelega, Georgia, "Times New Roman", Times, serif;
+  font-family: "Orelega", serif;
   margin: 0;
 `;
 
@@ -51,13 +50,23 @@ const EffectStrokeShadow = styled.span`
 const docLink = {
   text: "Documentation",
   url: "https://www.gatsbyjs.com/docs/",
-  color: "#8954A8",
 };
 
 // markup
 const IndexPage = () => {
+  // const [themed, setThemed] = React.useState(lightTheme);
+
+  // const ChangeTheme = () => {
+  //   if (themed === lightTheme) {
+  //     setThemed(darkTheme);
+  //   }
+  //   if (themed === darkTheme) {
+  //     setThemed(lightTheme);
+  //   }
+  // };
+
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <GlobalFonts />
       <GlobalStyle />
       <Layout>
@@ -79,9 +88,12 @@ const IndexPage = () => {
               😎
             </span>
           </ParagraphStyle>
+          {/* <ParagraphStyle>
+            <button onClick={ChangeTheme}>Change theme</button>
+          </ParagraphStyle> */}
         </PageStyle>
       </Layout>
-    </>
+    </ThemeProvider>
   );
 };
 

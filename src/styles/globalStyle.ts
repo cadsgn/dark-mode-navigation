@@ -1,11 +1,19 @@
 import { createGlobalStyle } from "styled-components";
+import { isPropertySignature } from "typescript";
+import { IThemeProps } from "./theme";
 
 const GlobalStyle = createGlobalStyle`
+    *, *:before, *:after {
+        box-sizing: border-box;
+    }
+
     html {
-        font-family: 'Montserrat', serif;
+        font-family: 'Montserrat', sans-serif;
         font-weight: 400;
-        font-size: 16px;
-        color: #000000;
+        font-size: ${(props: IThemeProps) => props.theme.spacing.big};
+        color: ${(props: IThemeProps) => props.theme.colors.black.default};
+        background-color: ${(props: IThemeProps) =>
+          props.theme.colors.white.default};
         -webkit-tap-highlight-color: transparent; 
     }
 
@@ -14,22 +22,18 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
     }
 
-    *, *:before, *:after {
-        box-sizing: border-box;
-    }
-
     *:focus {
         outline: 0;
     }
 
     a {
         display: inline-block;
-        color: #000000;
+        color: ${(props: IThemeProps) => props.theme.colors.black.default};
         text-decoration: none;        
         cursor: pointer;
 
         &:hover {
-        color: #000000;
+            color: ${(props: IThemeProps) => props.theme.colors.black.default};
             text-decoration: none;  
         }
 
@@ -39,10 +43,11 @@ const GlobalStyle = createGlobalStyle`
     }
 
     button {
+        color: ${(props: IThemeProps) => props.theme.colors.black.default};
         border: none;
         background-color: transparent;
         cursor: pointer;
-        font-family: 'Open-Sans', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         
         &:focus {
             outline: none;

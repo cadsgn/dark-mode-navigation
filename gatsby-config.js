@@ -3,5 +3,5 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "webapp",
   },
-  plugins: ["gatsby-plugin-styled-components", "gatsby-plugin-react-head", "gatsby-plugin-preload-fonts"],
+  plugins: ["gatsby-plugin-styled-components", "gatsby-plugin-react-helmet", "gatsby-plugin-preload-fonts"],
 };
