@@ -30,7 +30,7 @@ const HeadSubTitleStyle = styled.p`
 `;
 
 const ParagraphStyle = styled.p`
-  height: 200000px;
+  height: 200px;
 `;
 
 const CodeStyle = styled.code`
@@ -55,19 +55,19 @@ const docLink = {
 
 // markup
 const IndexPage = () => {
-  // const [themed, setThemed] = React.useState(lightTheme);
+  const [themed, setThemed] = React.useState(lightTheme);
 
-  // const ChangeTheme = () => {
-  //   if (themed === lightTheme) {
-  //     setThemed(darkTheme);
-  //   }
-  //   if (themed === darkTheme) {
-  //     setThemed(lightTheme);
-  //   }
-  // };
+  const ChangeTheme = () => {
+    if (themed === lightTheme) {
+      setThemed(darkTheme);
+    }
+    if (themed === darkTheme) {
+      setThemed(lightTheme);
+    }
+  };
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={themed}>
       <GlobalStyle />
       <Layout>
         <PageStyle>
@@ -84,14 +84,14 @@ const IndexPage = () => {
             </HeadSubTitleStyle>
           </HeadContainerStyle>
           <ParagraphStyle>
-            Go <CodeStyle>src/pages/index.js</CodeStyle> to know more about me
+            Go <CodeStyle>linkedIn</CodeStyle> to know more about me
             <span role='img' aria-label='Sunglasses smiley emoji'>
               😎
             </span>
           </ParagraphStyle>
-          {/* <ParagraphStyle>
+          <ParagraphStyle>
             <button onClick={ChangeTheme}>Change theme</button>
-          </ParagraphStyle> */}
+          </ParagraphStyle>
         </PageStyle>
       </Layout>
     </ThemeProvider>
