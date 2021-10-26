@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import { isPropertySignature } from "typescript";
 import { IThemeProps } from "./theme";
 
 const GlobalStyle = createGlobalStyle`
@@ -8,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     html {
-        font-family: 'Montserrat', sans-serif;
+        font-family: Montserrat, sans-serif;
         font-weight: 400;
         font-size: ${(props: IThemeProps) => props.theme.spacing.big};
         color: ${(props: IThemeProps) => props.theme.colors.black.default};

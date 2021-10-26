@@ -1,12 +1,11 @@
 import * as React from "react";
 import styled from "styled-components";
 //styles
-import GlobalFonts from "../styles/fonts";
 import GlobalStyle from "../styles/globalStyle";
 import { ThemeProvider } from "styled-components";
 import { theme, lightTheme, darkTheme } from "../styles/theme";
 //components
-import Layout from "../components/layout/layout";
+import Layout from "../components/common/layout";
 
 // styles
 const PageStyle = styled.main`
@@ -22,7 +21,7 @@ const HeadContainerStyle = styled.section`
 
 const HeadTitleStyle = styled.p`
   font-size: 82px;
-  font-family: "Orelega", serif;
+  font-family: Orelega one, serif;
   margin: 0;
 `;
 
@@ -30,7 +29,9 @@ const HeadSubTitleStyle = styled.p`
   text-align: center;
 `;
 
-const ParagraphStyle = styled.p``;
+const ParagraphStyle = styled.p`
+  height: 200000px;
+`;
 
 const CodeStyle = styled.code`
   color: #8a6534;
@@ -67,16 +68,16 @@ const IndexPage = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <GlobalFonts />
       <GlobalStyle />
       <Layout>
         <PageStyle>
           <HeadContainerStyle>
             <HeadTitleStyle>
-              <EffectStrokeShadow>Hello</EffectStrokeShadow>, I'm Carlos
+              <EffectStrokeShadow>Hello</EffectStrokeShadow> stranger
             </HeadTitleStyle>
             <HeadSubTitleStyle>
-              enjoy my work!
+              I'm Carlos, a former graphic designer that evolpes during more
+              than 10 years in a UX/UI developer.
               <span role='img' aria-label='Party popper emojis'>
                 🎉🎉🎉
               </span>
