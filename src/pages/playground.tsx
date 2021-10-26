@@ -50,18 +50,17 @@ const IndexPage = () => {
       <PageStyle>
         <HeadContainerStyle>
           <HeadTitleStyle>
-            <EffectStrokeShadow>Hello</EffectStrokeShadow> stranger
+            My <EffectStrokeShadow>Playground</EffectStrokeShadow>
           </HeadTitleStyle>
           <HeadSubTitleStyle>
-            I'm Carlos, a former graphic designer that evolpes during more than
-            10 years in a UX/UI developer.
+            Here is where i play.
             <span role='img' aria-label='Party popper emojis'>
-              🎉🎉🎉
+              ⛹️‍♂️⛹️‍♂️⛹️‍♂️
             </span>
           </HeadSubTitleStyle>
         </HeadContainerStyle>
         <ParagraphStyle>
-          Go <CodeStyle>linkedIn</CodeStyle> to know more about me.
+          Go <CodeStyle>GitHub</CodeStyle> to know more about me.
         </ParagraphStyle>
       </PageStyle>
     </Layout>
