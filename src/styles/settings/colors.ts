@@ -1,18 +1,19 @@
 export interface IColors {
-  white: {
-    default: string;
-  };
-  black: {
-    default: string;
+  white: string;
+  black: string;
+  gray: {
+    100: string;
   };
 }
 
 export const colors: IColors = {
-  white: { default: "#ffffff" },
-  black: { default: "#000000" },
+  white: "#ffffff",
+  black: "#000000",
+  gray: { 100: "#000000" },
 };
 
 export const darkColors: IColors = {
-  white: { default: "#000000" },
-  black: { default: "#ffffff" },
+  white: "#000000",
+  black: "#ffffff",
+  gray: { 100: "#000000" },
 };

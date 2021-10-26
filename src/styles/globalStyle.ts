@@ -10,9 +10,8 @@ const GlobalStyle = createGlobalStyle`
         font-family: Montserrat, sans-serif;
         font-weight: 400;
         font-size: ${(props: IThemeProps) => props.theme.spacing.big};
-        color: ${(props: IThemeProps) => props.theme.colors.black.default};
-        background-color: ${(props: IThemeProps) =>
-          props.theme.colors.white.default};
+        color: ${(props: IThemeProps) => props.theme.colors.black};
+        background-color: ${(props: IThemeProps) => props.theme.colors.white};
         -webkit-tap-highlight-color: transparent; 
     }
 
@@ -27,12 +26,12 @@ const GlobalStyle = createGlobalStyle`
 
     a {
         display: inline-block;
-        color: ${(props: IThemeProps) => props.theme.colors.black.default};
+        color: ${(props: IThemeProps) => props.theme.colors.black};
         text-decoration: none;        
         cursor: pointer;
 
         &:hover {
-            color: ${(props: IThemeProps) => props.theme.colors.black.default};
+            color: ${(props: IThemeProps) => props.theme.colors.black};
             text-decoration: none;  
         }
 
@@ -42,7 +41,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     button {
-        color: ${(props: IThemeProps) => props.theme.colors.black.default};
+        color: ${(props: IThemeProps) => props.theme.colors.black};
         border: none;
         background-color: transparent;
         cursor: pointer;
