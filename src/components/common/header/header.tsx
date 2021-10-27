@@ -10,7 +10,7 @@ import {
 //components
 
 // markup
-const Header = ({ ChangeTheme }: { ChangeTheme: any }) => {
+const Header = ({ ToggleTheme }: { ToggleTheme: any }) => {
   return (
     <HeaderContainerStyle>
       <LinkContainerStyle>
@@ -19,17 +19,17 @@ const Header = ({ ChangeTheme }: { ChangeTheme: any }) => {
         </Link>
       </LinkContainerStyle>
       <LinkContainerStyle>
-        <Link to='/work' style={LinkStyle} activeStyle={ActiveStyle}>
+        <Link to='/work/' style={LinkStyle} activeStyle={ActiveStyle}>
           Work
         </Link>
       </LinkContainerStyle>
       <LinkContainerStyle>
-        <Link to='/playground' style={LinkStyle} activeStyle={ActiveStyle}>
+        <Link to='/playground/' style={LinkStyle} activeStyle={ActiveStyle}>
           Playground
         </Link>
       </LinkContainerStyle>
       <LinkContainerStyle>
-        <button onClick={ChangeTheme}>Change theme</button>
+        <button onClick={ToggleTheme}>Change theme</button>
       </LinkContainerStyle>
     </HeaderContainerStyle>
   );

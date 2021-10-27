@@ -1,6 +1,6 @@
 import baseStyled, { ThemedStyledInterface } from "styled-components";
-import { collapseTextChangeRangesAcrossMultipleVersions } from "typescript";
-import { ISpacing, spacing } from "./settings/spacing";
+import { ISizes, sizes } from "./settings/sizes";
+import { IFontSizes, fontSizes } from "./settings/fontSizes";
 import { IColors, colors, darkColors } from "./settings/colors";
 
 /* Theme */
@@ -16,29 +16,26 @@ import { IColors, colors, darkColors } from "./settings/colors";
 export interface IThemeProps {
   theme: {
     mode: string;
-    spacing: ISpacing;
+    sizes: ISizes;
+    fontSizes: IFontSizes;
     colors: IColors;
   };
 }
 
-export const theme = {
-  mode: "default",
-  spacing: spacing,
-  colors: colors,
+const theme = {
+  sizes: sizes,
+  fontSizes: fontSizes,
 };
 
-//Change theme from light to dark re-load fonts. And it's a shit!
 export const lightTheme = {
-  mode: "light",
-  spacing: spacing,
+  ...theme,
   colors: colors,
 };
 
 export const darkTheme = {
-  mode: "dark",
-  spacing: spacing,
+  ...theme,
   colors: darkColors,
 };
 
-export type Theme = typeof theme;
+export type Theme = typeof lightTheme;
 export const styled = baseStyled as ThemedStyledInterface<Theme>;

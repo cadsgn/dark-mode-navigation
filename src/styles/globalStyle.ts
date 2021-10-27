@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
     html {
         font-family: Montserrat, sans-serif;
         font-weight: 400;
-        font-size: ${(props: IThemeProps) => props.theme.spacing.big};
+        font-size: ${(props: IThemeProps) => props.theme.fontSizes.body};
         color: ${(props: IThemeProps) => props.theme.colors.black};
         background-color: ${(props: IThemeProps) => props.theme.colors.white};
         -webkit-tap-highlight-color: transparent; 

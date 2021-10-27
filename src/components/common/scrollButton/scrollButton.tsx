@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import isBrowser from "../../../utils/isBrowser";
 
 export const Heading = styled.h1`
   text-align: center;
@@ -36,7 +37,7 @@ const ScrollButton = () => {
   };
 
   const scrollToTop = () => {
-    if (typeof window !== "undefined") {
+    if (isBrowser) {
       window.scrollTo({
         top: 0,
         behavior: "smooth",
@@ -44,7 +45,7 @@ const ScrollButton = () => {
     }
   };
 
-  if (typeof window !== "undefined") {
+  if (isBrowser) {
     window.addEventListener("scroll", toggleVisible);
   }
 

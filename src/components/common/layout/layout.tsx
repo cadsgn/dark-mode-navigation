@@ -3,35 +3,30 @@ import * as React from "react";
 import GlobalStyle from "../../../styles/globalStyle";
 import GlobalFonts from "../../../styles/fonts/fonts";
 import { ThemeProvider } from "styled-components";
-import { theme, lightTheme, darkTheme } from "../../../styles/theme";
+import { lightTheme, darkTheme } from "../../../styles/theme";
 //Components
 import Head from "../head/head";
 import Header from "../header/header";
 import ScrollButton from "../scrollButton/scrollButton";
+//Hooks
+import { useSelectedTheme } from "../../../utils/hooks/useSelectedTheme";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
-  const [themed, setThemed] = React.useState(lightTheme);
-
-  const ChangeTheme = () => {
-    if (themed === lightTheme) {
-      setThemed(darkTheme);
-    }
-    if (themed === darkTheme) {
-      setThemed(lightTheme);
-    }
-  };
+  const [theme, ToggleTheme] = useSelectedTheme();
+  const themeSelected = theme === "light" ? lightTheme : darkTheme;
 
   return (
     <>
       <GlobalFonts />
-      <ThemeProvider theme={themed}>
+      <ThemeProvider theme={themeSelected}>
         <GlobalStyle />
         <Head />
-        <Header ChangeTheme={ChangeTheme} />
+        <Header ToggleTheme={ToggleTheme} />
         <div>{children}</div>
         <ScrollButton />
       </ThemeProvider>
     </>
   );
 };
+
 export default Layout;

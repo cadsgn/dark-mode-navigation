@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import { IThemeProps } from "../styles/theme";
 //components
 import Layout from "../components/common/layout/layout";
 
@@ -16,8 +17,8 @@ const HeadContainerStyle = styled.section`
 `;
 
 const HeadTitleStyle = styled.p`
-  font-size: 82px;
   font-family: Orelega one, serif;
+  font-size: ${(props: IThemeProps) => props.theme.fontSizes.Header};
   margin: 0;
 `;
 
@@ -26,7 +27,7 @@ const HeadSubTitleStyle = styled.p`
 `;
 
 const ParagraphStyle = styled.p`
-  height: 200px;
+  height: 800px;
 `;
 
 const CodeStyle = styled.code`
