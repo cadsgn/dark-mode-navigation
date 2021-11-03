@@ -8,6 +8,7 @@ import { lightTheme, darkTheme } from "../../../styles/theme";
 import Head from "../head/head";
 import Header from "../header/header";
 import ScrollButton from "../scrollButton/scrollButton";
+import SwitchThemeButton from "../switchThemeButton/switchThemeButton";
 //Hooks
 import { useSelectedTheme } from "../../../utils/hooks/useSelectedTheme";
 
@@ -21,9 +22,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <ThemeProvider theme={themeSelected}>
         <GlobalStyle />
         <Head />
-        <Header ToggleTheme={ToggleTheme} />
+        <Header />
         <div>{children}</div>
         <ScrollButton />
+        <SwitchThemeButton ToggleTheme={ToggleTheme} themeSelected={theme} />
       </ThemeProvider>
     </>
   );

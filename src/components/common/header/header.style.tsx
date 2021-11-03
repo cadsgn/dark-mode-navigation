@@ -3,19 +3,20 @@ import styled from "styled-components";
 // styles
 export const HeaderContainerStyle = styled.nav`
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
   width: 100%;
-  align-items: center;
+  margin: 0 auto;
+  height: auto;
+  margin-bottom: 32px;
+  padding: 16px;
+  justify-content: center;
+  place-items: center;
+  place-content: space-between;
+  box-shadow: 0px 9px 12px 1px rgba(0, 0, 0, 0.1);
 `;
 
-export const LinkContainerStyle = styled.article`
-  height: 48px;
-  margin-bottom: 32px;
-  border-bottom: 1px solid #000000;
-
-  a:hover {
-    color: #5454cc;
-  }
+export const LinkContainerStyle = styled.section`
+  padding-top: 16px;
 `;
 
 export const LinkStyle = {
@@ -23,5 +24,5 @@ export const LinkStyle = {
 };
 
 export const ActiveStyle = {
-  color: "red",
+  color: "#00AA9C",
 };

@@ -1,27 +1,32 @@
 import * as React from "react";
 import styled from "styled-components";
 import isBrowser from "../../../utils/isBrowser";
+//icons
+import { ReactComponent as ArrowUp } from "../../../assets/icons/arrow-up.svg";
 
-export const Heading = styled.h1`
-  text-align: center;
-  color: green;
-`;
+interface IStyledProps {
+  visible: boolean;
+}
 
-export const Content = styled.div`
-  overflow-y: scroll;
-  height: 2500px;
-`;
-
-export const Button = styled.div`
-  position: fixed;
-  width: 100%;
-  left: 50%;
-  bottom: 40px;
-  height: 20px;
-  font-size: 3rem;
+const Button = styled.button<IStyledProps>`
   z-index: 1;
-  cursor: pointer;
-  color: green;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background-color: #005b4e;
+  border-radius: 50%;
+  bottom: 16px;
+  right: 16px;
+  transition: all 0.5s ease;
+  opacity: ${(props) => (props.visible ? 1 : 0)};
+
+  svg path {
+    stroke: white;
+    fill: transparent;
+  }
 `;
 
 const ScrollButton = () => {
@@ -50,11 +55,8 @@ const ScrollButton = () => {
   }
 
   return (
-    <Button
-      onClick={scrollToTop}
-      style={{ display: visible ? "inline" : "none" }}
-    >
-      Hola
+    <Button visible={visible} onClick={scrollToTop}>
+      <ArrowUp />
     </Button>
   );
 };

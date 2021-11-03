@@ -4,15 +4,16 @@ import { IThemeProps } from "./theme";
 const GlobalStyle = createGlobalStyle`
     *, *:before, *:after {
         box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent; 
     }
 
     html {
         font-family: Montserrat, sans-serif;
         font-weight: 400;
         font-size: ${(props: IThemeProps) => props.theme.fontSizes.body};
-        color: ${(props: IThemeProps) => props.theme.colors.black};
-        background-color: ${(props: IThemeProps) => props.theme.colors.white};
-        -webkit-tap-highlight-color: transparent; 
+        color: ${(props: IThemeProps) => props.theme.colors.neutral[500]};
+        background-color: ${(props: IThemeProps) =>
+          props.theme.colors.neutral[100]};
     }
 
     body {
@@ -26,12 +27,12 @@ const GlobalStyle = createGlobalStyle`
 
     a {
         display: inline-block;
-        color: ${(props: IThemeProps) => props.theme.colors.black};
+        color: ${(props: IThemeProps) => props.theme.colors.neutral[900]};
         text-decoration: none;        
         cursor: pointer;
 
         &:hover {
-            color: ${(props: IThemeProps) => props.theme.colors.black};
+            color: ${(props: IThemeProps) => props.theme.colors.primary[500]};
             text-decoration: none;  
         }
 
@@ -41,7 +42,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     button {
-        color: ${(props: IThemeProps) => props.theme.colors.black};
+        color: ${(props: IThemeProps) => props.theme.colors.neutral[900]};
         border: none;
         background-color: transparent;
         cursor: pointer;
@@ -62,9 +63,8 @@ const GlobalStyle = createGlobalStyle`
         display: block;
     }
     
-    svg {
-        fill: currentColor;
-        height: 24px;
+    svg path {
+        fill: ${(props: IThemeProps) => props.theme.colors.primary[500]};
     }
 `;
 

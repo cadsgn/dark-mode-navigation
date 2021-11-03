@@ -27,7 +27,7 @@ const HeadSubTitleStyle = styled.p`
 `;
 
 const ParagraphStyle = styled.p`
-  height: 800px;
+  height: 1800px;
 `;
 
 const CodeStyle = styled.code`

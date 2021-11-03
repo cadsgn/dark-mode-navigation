@@ -8,28 +8,25 @@ import {
   ActiveStyle,
 } from "./header.style";
 //components
+//icons
+import { ReactComponent as LogoReduced } from "../../../assets/logo/reduced.svg";
+import { ReactComponent as LogoStandard } from "../../../assets/logo/standard.svg";
 
 // markup
-const Header = ({ ToggleTheme }: { ToggleTheme: any }) => {
+const Header = () => {
   return (
     <HeaderContainerStyle>
+      <LogoReduced />
       <LinkContainerStyle>
         <Link to='/' style={LinkStyle} activeStyle={ActiveStyle}>
           Home
         </Link>
-      </LinkContainerStyle>
-      <LinkContainerStyle>
         <Link to='/work/' style={LinkStyle} activeStyle={ActiveStyle}>
           Work
         </Link>
-      </LinkContainerStyle>
-      <LinkContainerStyle>
-        <Link to='/playground/' style={LinkStyle} activeStyle={ActiveStyle}>
-          Playground
+        <Link to='/lab/' style={LinkStyle} activeStyle={ActiveStyle}>
+          Lab
         </Link>
-      </LinkContainerStyle>
-      <LinkContainerStyle>
-        <button onClick={ToggleTheme}>Change theme</button>
       </LinkContainerStyle>
     </HeaderContainerStyle>
   );

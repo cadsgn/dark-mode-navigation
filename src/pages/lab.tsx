@@ -50,7 +50,7 @@ const IndexPage = () => {
       <PageStyle>
         <HeadContainerStyle>
           <HeadTitleStyle>
-            My <EffectStrokeShadow>Playground</EffectStrokeShadow>
+            My <EffectStrokeShadow>Lab</EffectStrokeShadow>
           </HeadTitleStyle>
           <HeadSubTitleStyle>
             Here is where i play.
