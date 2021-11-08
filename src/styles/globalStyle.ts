@@ -8,9 +8,10 @@ const GlobalStyle = createGlobalStyle`
     }
 
     html {
-        font-family: Montserrat, sans-serif;
+        font-family: -apple-system, Roboto, sans-serif, serif;
         font-weight: 400;
         font-size: ${(props: IThemeProps) => props.theme.fontSizes.body};
+        line-height: ${(props: IThemeProps) => props.theme.fontSizes.subHeader};
         color: ${(props: IThemeProps) => props.theme.colors.neutral[500]};
         background-color: ${(props: IThemeProps) =>
           props.theme.colors.neutral[100]};
@@ -46,7 +47,7 @@ const GlobalStyle = createGlobalStyle`
         border: none;
         background-color: transparent;
         cursor: pointer;
-        font-family: 'Montserrat', sans-serif;
+        font-family: -apple-system, Roboto, sans-serif, serif;
         
         &:focus {
             outline: none;

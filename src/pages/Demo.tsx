@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 //components
-import Layout from "../components/common/layout/layout";
+import Layout from "../components/layout/layout";
 
 // styles
 const PageStyle = styled.main`
@@ -17,7 +17,7 @@ const HeadContainerStyle = styled.section`
 
 const HeadTitleStyle = styled.p`
   font-size: 82px;
-  font-family: Orelega one, serif;
+  font-family: -apple-system, Georgia, "Times New Roman", Times, serif;
   margin: 0;
 `;
 
@@ -50,15 +50,18 @@ const IndexPage = () => {
       <PageStyle>
         <HeadContainerStyle>
           <HeadTitleStyle>
-            Some of my <EffectStrokeShadow>Work</EffectStrokeShadow>
+            My <EffectStrokeShadow>Lab</EffectStrokeShadow>
           </HeadTitleStyle>
           <HeadSubTitleStyle>
-            Take a look to my work.
+            Here is where i play.
             <span role='img' aria-label='Party popper emojis'>
-              👨‍💻👨‍💻👨‍💻
+              ⛹️‍♂️⛹️‍♂️⛹️‍♂️
             </span>
           </HeadSubTitleStyle>
         </HeadContainerStyle>
+        <ParagraphStyle>
+          Go <CodeStyle>GitHub</CodeStyle> to know more about me.
+        </ParagraphStyle>
       </PageStyle>
     </Layout>
   );
